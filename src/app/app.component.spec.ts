@@ -1,6 +1,23 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 describe('AppComponent', () => {
+  let appComponent = new AppComponent();
+
+  it('should create the app', () => {
+    const app = appComponent;
+    expect(app).toBeTruthy();
+  });
+
+  it('should have app title', () => {
+    const title = appComponent.title;
+    expect(title).toEqual('app');
+  });
+
+});
+
+/*
+Old Code
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -24,4 +41,6 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
   }));
-});
+
+
+ */
